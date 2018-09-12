@@ -30,7 +30,7 @@
 \LoadClass[10pt]{scrartcl}
 
 \setcounter{secnumdepth}{-1}
-\RequirePackage[hmargin=0.75cm,vmargin=1cm,twocolumn,columnsep=1.25cm]{geometry}
+\RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
 \RequirePackage{bookman,etoolbox,hyperref,marvosym,needspace,tabularx,xcolor}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
@@ -105,7 +105,7 @@
 % \personal[optional: web site without scheme (no http:// prefix)]
 %          {address}{phone number}{email}
 % ]|
-\newcommand\personal[6][]{%
+\newcommand\personal[5][]{%
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
@@ -116,7 +116,6 @@
     \Letter      & {#4}
     \ifstrempty{#1}{}{\smallskip\\ \Lightning & \href{http://#1}{#1}}
     \ifstrempty{#5}{}{\smallskip\\ \Lightning & \href{https://#5}{#5}}
-    \ifstrempty{#6}{}{\smallskip\\ \Lightning & \href{http://#6}{#6}}
     \end{tabularx}}}
 
 % Every \item can be followed by one or more paragraphs
